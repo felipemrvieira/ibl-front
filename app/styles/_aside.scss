@@ -1,7 +1,13 @@
-@mixin pad-lateral($tamanho: 24px) {
+@mixin pad-lateral($tamanho: 36px) {
     padding-left: $tamanho;
     padding-right: $tamanho;
     padding-top: $tamanho;
+}
+
+@mixin label() {
+    color: $dark-grey;
+    margin-bottom: 5px;
+    font-weight: 100;
 }
 
 aside{
@@ -45,18 +51,94 @@ aside{
         }
     }
     #desempenho{
-        @include pad-lateral()
+        @include pad-lateral();
+        .desempenho-label{
+            @include label();
+        }
+        .desempenho-value{
+            font-size: 24px;
+        }
+
     }
     #grafico{
-        @include pad-lateral()
+        @include pad-lateral();
     }
     #conquistas{
-        @include pad-lateral()
+        @include pad-lateral();
+        .conquistas-label{
+            @include label();
+        }
+        .conquistas-legenda{
+            text-align: center;
+            @include label();
+            margin-top: 12px;
+        }
     }
     #ranking{
-        @include pad-lateral()
+        @include pad-lateral();
+        .ranking-label{
+            @include label();
+        }
+        .nav{
+            border-bottom: 0;
+            .nav-item{
+                margin-bottom: -7px;
+                .nav-link{
+                    font-weight: 100;
+                    color: $dark-grey;
+                    &:hover{
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px;
+                    }
+                }
+                .active{
+                    color: black;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    background-color: #dde6ed;
+                    border-bottom: 0;
+
+                }
+            }
+        }
+        .tab-content{
+            background-color: #dde6ed;
+            border-radius: 10px;
+            padding: 0 12px 12px 12px;
+            max-height: 250px;
+            overflow-y: scroll;
+
+            .lista-alunos{
+                margin-bottom: 18px;
+                padding: 0;
+                img{
+                    border-radius: 50%;
+                    height: 50px;
+                    width: 50px;
+                    float: left;
+                }
+                .info-aluno{
+                    margin-left: 12px;
+                    display: inline-block;
+                    .nome{
+                        margin: 0;
+                    }
+                    .unidade{
+                        margin: 0;
+                        font-size: 11px;
+                        color: $dark-grey;
+                        
+                    }
+                }
+                .pontos{
+                    margin-left: 12px;
+                    float: right;
+                    display: inline-block;
+                }
+            }
+        }
     }
     #menu{
-        @include pad-lateral()
+        @include pad-lateral();
     }
 }

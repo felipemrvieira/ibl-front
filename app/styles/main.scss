@@ -1,7 +1,13 @@
 // bower:scss
 // endbower
 @import 'variables';
+@import 'nav';
+
 
 body{
   background-color: $soft-grey;
+  .container-fluid{
+    margin: 0;
+    padding: 0;
+  }
 }

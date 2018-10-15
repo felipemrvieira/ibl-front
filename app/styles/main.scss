@@ -3,11 +3,19 @@
 @import 'variables';
 @import 'nav';
 
+.container-fluid{
+  margin: 0;
+  padding: 0;
+}
 
 body{
   background-color: $soft-grey;
-  .container-fluid{
-    margin: 0;
-    padding: 0;
+  main{
+    max-width: 100%;
+    overflow: hidden;
+    div{
+      @import 'aside';
+      @import 'atividades';
+    }
   }
 }

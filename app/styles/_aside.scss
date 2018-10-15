@@ -1,0 +1,62 @@
+@mixin pad-lateral($tamanho: 24px) {
+    padding-left: $tamanho;
+    padding-right: $tamanho;
+    padding-top: $tamanho;
+}
+
+aside{
+    background-color: white;
+    padding: 0 !important;
+    min-height: 100vh;
+    
+
+    #profile{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff987d+0,fdd96b+100 */
+        background: #ff987d; /* Old browsers */
+        background: -moz-linear-gradient(45deg, #ff987d 0%, #fdd96b 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #ff987d 0%,#fdd96b 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #ff987d 0%,#fdd96b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff987d', endColorstr='#fdd96b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        
+        padding: 32px;
+        div{
+            img{
+                border-radius: 50%;
+                height: 130px;
+                width: 130px;
+            }
+            #icon-avatar{
+                height: 50px;
+                width: 50px;
+                // position: relative;
+                // bottom: -40px;
+                // left: -40px;
+                position: absolute;
+                top: 115px;
+                right: 115px;
+            }
+            p{
+                text-align: center;
+                color: white;
+                font-size: 24px;
+                letter-spacing: 1px;
+                margin: 14px 0 0 0 ;
+            }
+        }
+    }
+    #desempenho{
+        @include pad-lateral()
+    }
+    #grafico{
+        @include pad-lateral()
+    }
+    #conquistas{
+        @include pad-lateral()
+    }
+    #ranking{
+        @include pad-lateral()
+    }
+    #menu{
+        @include pad-lateral()
+    }
+}

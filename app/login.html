@@ -1,0 +1,137 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ibl_sem_legenda_front</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/login.css">
+    <!-- endbuild -->
+    
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/images/logo-ibl.png" class="d-inline-block align-top" alt="">
+                </a>
+               
+                <div id="slogan" class="pull-right">
+                    <img src="/images/viva.png" class="d-inline-block align-top" alt="">
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div id="card-login">
+
+                <div class="owl">
+                    <div class="hand"></div>
+                    <div class="hand hand-r"></div>
+                    <div class="arms">
+                        <div class="arm"></div>
+                        <div class="arm arm-r"></div>
+                    </div>
+                </div>
+
+                <div class="form">
+                    <div id="form-label">
+                        <p>Sign In</p>
+                    </div>
+                    <div class="control">
+                        <label for="email" class="fa fa-envelope"></label>
+                        <input id="email" placeholder="Email" type="email"></input>
+                    </div>
+                    <div class="control">
+                        <label for="password" class="fa fa-asterisk"></label>
+                        <input id="password" placeholder="Password" type="password"></input>
+                    </div>
+                    <div class="control">
+                        <button class="btn btn-1">Login</button>   
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        $('input[type="password"]').on('focus', function () {
+          $('*').addClass('password');
+            }).on('focusout', function () {
+            $('*').removeClass('password');
+        });
+    </script>
+    <script>
+        var angle = 0;
+        var test = $('main');
+        function changeAngle() {
+            angle = (angle + 1) % 360;
+            test.css({
+                'background': '-moz-linear-gradient(' + angle + 'deg ,#03b8cb 1%,#5fdb85 50%,#bcff3f 100%)',
+                'background': '-webkit-linear-gradient(' + angle + 'deg ,#03b8cb 1%,#5fdb85 50%,#bcff3f 100%)',
+                'background': 'linear-gradient(' + angle + 'deg ,#03b8cb 1%,#5fdb85 50%,#bcff3f 100%)'
+
+                // 'background': '-webkit-linear-gradient(' + angle + 'deg ,#03b8cb 1%,#5fdb85 50%,#bcff3f 100%)'
+
+            });
+        }
+        // setInterval(changeAngle, 50);
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

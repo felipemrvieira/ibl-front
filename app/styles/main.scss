@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+.container{
+  // margin: 0 128px;
+}
+
 body{
   background-color: $soft-grey;
   main{
@@ -16,7 +20,6 @@ body{
     div{
       @import 'aside';
       @import 'atividades';
-      @import 'licoes';
     }
   }
 }

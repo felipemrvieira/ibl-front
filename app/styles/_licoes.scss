@@ -1,0 +1,80 @@
+#atividades{
+    .container-fluid{
+        padding: 32px;
+        #level{
+            .level-label{}
+            .lesson{
+                margin-bottom: 36px;;
+                #progress-bar-container {
+                    position: relative;
+                    height: 58px;
+                    border-radius: 50px;
+                    overflow: hidden;
+            
+                    .progress-bar-child {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .progress {
+                        align-self: center;
+                        padding: 0 36px;
+                        color: white;
+                        font-size: 1.6em;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        animation-direction: reverse;
+                        background: $blue-gradiente;
+                        /* Old browsers */
+                        background: -moz-linear-gradient(left, $blue-gradiente 0%, $green-gradiente 50%, $yellow-gradiente 100%);
+                        /* FF3.6-15 */
+                        background: -webkit-linear-gradient(left, $blue-gradiente 0%, $green-gradiente 50%, $yellow-gradiente 100%);
+                        /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(to right, $blue-gradiente 0%, $green-gradiente 50%, $yellow-gradiente 100%);
+                        .lesson-wrapper{
+                            display: flex;
+                            align-items: center;
+
+                            .lesson-name{ 
+                                display: inline-block;
+                                margin: 0;
+                            }
+                            .lesson-percentage{
+                                display: inline-block;
+                                margin: 0 24px;
+                            }
+                        }
+                    }
+                    
+                    .shrinker {
+                        background-color: $dark-grey;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 100%;
+                    }
+
+                    .timelapse {
+                        animation-name: timelapse;
+                        animation-fill-mode: forwards;
+                        animation-duration: 2s;
+                        animation-timing-function: cubic-bezier(.86, .05, .4, .96);
+                    }
+                    
+                    @keyframes timelapse {
+                        0% {
+                            width: 100%;
+                        }
+                        100% {
+                            width: 10%;
+                        }
+                    }
+                    
+                    
+                }
+                
+                
+            }
+        }
+    }
+}

@@ -244,12 +244,98 @@
 
             </aside>
             <div id="atividades" class="col-9">
-              d
+              <div class="container-fluid">
+                <div id="level">
+                  <p class="level-label">Beginner 30%</p>
+                  
+                  <div class="lesson">
+                    <div id="progress-bar-container">
+                        <div class="progress-bar-child progress">
+                          <div class="lesson-wrapper">
+                            <p class="lesson-name">Lesson 1</p>
+                            <p class="lesson-percentage">55/60</p>
+                          </div>
+                        </div>
+                        <div class="progress-bar-child shrinker timelapse"></div>
+                    </div>
+                  </div>
+
+                  <div class="lesson">
+                      <div id="progress-bar-container">
+                          <div class="progress-bar-child progress">
+                            <div class="lesson-wrapper">
+                              <p class="lesson-name">Lesson 1</p>
+                              <p class="lesson-percentage">55/60</p>
+                            </div>
+                          </div>
+                          <div class="progress-bar-child shrinker timelapse"></div>
+                      </div>
+                    </div>
+
+                    <div class="lesson">
+                        <div id="progress-bar-container">
+                            <div class="progress-bar-child progress">
+                              <div class="lesson-wrapper">
+                                <p class="lesson-name">Lesson 1</p>
+                                <p class="lesson-percentage">55/60</p>
+                              </div>
+                            </div>
+                            <div class="progress-bar-child shrinker timelapse"></div>
+                        </div>
+                      </div>
+
+                      <div class="lesson">
+                          <div id="progress-bar-container">
+                              <div class="progress-bar-child progress">
+                                <div class="lesson-wrapper">
+                                  <p class="lesson-name">Lesson 1</p>
+                                  <p class="lesson-percentage">55/60</p>
+                                </div>
+                              </div>
+                              <div class="progress-bar-child shrinker timelapse"></div>
+                          </div>
+                        </div>
+
+                        <div class="lesson">
+                            <div id="progress-bar-container">
+                                <div class="progress-bar-child progress">
+                                  <div class="lesson-wrapper">
+                                    <p class="lesson-name">Lesson 1</p>
+                                    <p class="lesson-percentage">55/60</p>
+                                  </div>
+                                </div>
+                                <div class="progress-bar-child shrinker timelapse"></div>
+                            </div>
+                          </div>
+
+                          <div class="lesson">
+                              <div id="progress-bar-container">
+                                  <div class="progress-bar-child progress">
+                                    <div class="lesson-wrapper">
+                                      <p class="lesson-name">Lesson 1</p>
+                                      <p class="lesson-percentage">55/60</p>
+                                    </div>
+                                  </div>
+                                  <div class="progress-bar-child shrinker timelapse"></div>
+                              </div>
+                            </div>
+
+                </div>
+              </div>
             </div>
           </div>
         </main>
     </div>
     
+    <script>
+      $( document ).ready(function() {
+        $('.shrinker').removeClass('timelapse');
+        setTimeout(function() {
+          $('.shrinker').addClass('timelapse');
+        }, 500)
+      })
+
+    </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

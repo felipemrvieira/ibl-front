@@ -1,13 +1,22 @@
 @mixin pad-lateral($tamanho: 36px) {
     padding-left: $tamanho;
     padding-right: $tamanho;
-    padding-top: $tamanho;
+    padding-top: $tamanho / 3;
+    padding-bottom: $tamanho / 3;
 }
 
 @mixin label() {
     color: $dark-grey;
     margin-bottom: 5px;
     font-weight: 100;
+}
+
+hr{
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #f9f9f9;
+    margin: 1em 2em;
+
 }
 
 aside{
@@ -25,8 +34,11 @@ aside{
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff987d', endColorstr='#fdd96b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
         
         padding: 32px;
-        div{
-            img{
+        #images-wrapper{
+            position: relative;
+            top: 0;
+            left: 0;
+            #avatar{
                 border-radius: 50%;
                 height: 130px;
                 width: 130px;
@@ -34,24 +46,23 @@ aside{
             #icon-avatar{
                 height: 50px;
                 width: 50px;
-                // position: relative;
-                // bottom: -40px;
-                // left: -40px;
                 position: absolute;
-                top: 115px;
-                right: 115px;
+                top: 90px;
+                right: 10px;
             }
-            p{
-                text-align: center;
-                color: white;
-                font-size: 24px;
-                letter-spacing: 1px;
-                margin: 14px 0 0 0 ;
-            }
+        }
+        p{
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 350;
+            letter-spacing: 2px;
+            margin: 14px 0 0 0 ;
         }
     }
     #desempenho{
         @include pad-lateral();
+        margin-top: 24px;
         .desempenho-label{
             @include label();
         }
@@ -68,10 +79,17 @@ aside{
         .conquistas-label{
             @include label();
         }
+        .icon-conquistas{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 5em;
+        }
         .conquistas-legenda{
             text-align: center;
             @include label();
             margin-top: 12px;
+            font-size: 0.8em;
         }
     }
     #ranking{
@@ -81,31 +99,76 @@ aside{
         }
         .nav{
             border-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+
+            .left-curve{
+                background-color: #dde6ed;
+                content: " ";
+            }
+            
             .nav-item{
                 margin-bottom: -7px;
                 .nav-link{
                     font-weight: 100;
+                    font-size: 0.9em;
                     color: $dark-grey;
+                    padding-top: 2px;
+                    padding-bottom: 7px;
+                    align-items: center;
+                    justify-content: center;
                     &:hover{
-                        border-top-left-radius: 15px;
-                        border-top-right-radius: 15px;
+                        border-top-left-radius: 14px;
+                        border-top-right-radius: 14px;
                     }
                 }
                 .active{
                     color: black;
-                    border-top-left-radius: 15px;
-                    border-top-right-radius: 15px;
+                    border-top-left-radius: 14px;
+                    border-top-right-radius: 14px;
                     background-color: #dde6ed;
                     border-bottom: 0;
+                    position:relative;
+                    
+                    &:after,
+                    &:before{
+                        content:'';
+                        width: 20px;
+                        height: 16px;
+                        border: 6px solid #dde6ed;
+                        position: absolute;
+                        bottom: 0px;
+                        border-top: 0;
+                    }
+                    
+                    &:after{
+                        border-left:0;
+                        -moz-border-radius:0 0 15px 0;
+                        -webkit-border-radius:0 0 15px 0;
+                        border-top-left-radius:0 0 15px 0;
+                        left:-15px;
+                    }
+                    &:before{
+                        border-right:0;
+                        -moz-border-radius:0 0 0 15px;
+                        -webkit-border-radius:0 0 0 15px;
+                        border-top-left-radius:0 0 0 15px;
+                        right:-15px;
+                    }
+                    
 
                 }
             }
         }
         .tab-content{
             background-color: #dde6ed;
-            border-radius: 10px;
-            padding: 0 12px 12px 12px;
-            max-height: 250px;
+            border-radius: 15px;
+            border-top: 15px solid #dde6ed;
+            border-bottom: 15px solid #dde6ed;
+            padding: 0 5px;
+            max-height: 300px;
             overflow-y: scroll;
 
             .lista-alunos{
@@ -140,5 +203,35 @@ aside{
     }
     #menu{
         @include pad-lateral();
+        padding-bottom: 36px;
+        .menu-item{
+            a{
+                text-decoration: none;
+                color: $dark-grey;
+                display: flex;
+                flex-direction: row;
+                transition: all 0.5s ease;
+
+                &:hover{
+                    padding-left: 18px;
+                    .fas{
+                        color: darken($dark-grey, 10);
+                    }
+                }
+                .fas{
+                    color: $dark-grey;
+                    display: inline-block;
+                    transition: all 0.5s ease;
+                }
+                .menu-label{
+                    color: #383535;
+                    font-size: 0.9em;
+                    display: inline-block;
+                    margin-left: 13px;
+                    margin-bottom: 0;
+                    align-self: center;
+                }
+            }
+        }
     }
 }

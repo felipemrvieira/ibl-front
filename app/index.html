@@ -13,6 +13,7 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
     <!-- build:css styles/main.css -->
@@ -65,11 +66,10 @@
             <aside class="col-3">
               <div id="profile" class="d-flex justify-content-center">
                 <div>
-                  <div class=" d-flex justify-content-center">
-                    <img src="/images/avatar.png" alt="">
+                  <div id="images-wrapper" class="d-flex justify-content-center">
+                    <img id="avatar" src="/images/avatar.png" alt="">
+                    <img id="icon-avatar" src="/images/star-icon.png" alt="">
                   </div>
-                  <img id="icon-avatar" src="/images/star-icon.png" alt="">
-                  
                   <p>felipemrvieira</p>
                 </div>
               </div>
@@ -93,24 +93,26 @@
               <div id="grafico">
                 <img width="100%" src="/images/grafico.jpg" alt="">
               </div>
+              <hr>
               <div id="conquistas">
                 <p id="conquistas-label">Conquistas</p>
                 <div class="row">
                   <div class="col-4">
-                    <img width="80px" id="icon-avatar" src="/images/star-icon.png" alt="">
-                    <p class="conquistas-legenda">44432</p>
+                    <img class="icon-conquistas" src="/images/star-icon.png" alt="">
+                    <p class="conquistas-legenda">Vencedor</p>
                   </div>
                   <div class="col-4">
-                    <img width="80px" id="icon-avatar" src="/images/star-icon.png" alt="">
-                    <p class="conquistas-legenda">44432</p>
+                    <img class="icon-conquistas" src="/images/star-icon.png" alt="">
+                    <p class="conquistas-legenda">Coletividade</p>
                   </div>
                   <div class="col-4">
-                    <img width="80px" id="icon-avatar" src="/images/star-icon.png" alt="">
-                    <p class="conquistas-legenda">44432</p>
+                    <img class="icon-conquistas" src="/images/star-icon.png" alt="">
+                    <p class="conquistas-legenda">Dedicação</p>
                   </div>
                 </div>
 
               </div>
+              <hr>
               <div id="ranking">
                 <p id="ranking-label">Ranking</p>
                 <!-- Nav tabs -->
@@ -128,7 +130,7 @@
                 
                   <!-- Tab panes -->
                   <div class="tab-content">
-                    <div id="home" class="container tab-pane active"><br>
+                    <div id="home" class="container tab-pane active">
                       
                       <div class="container lista-alunos" >
                         <img src="/images/avatar.png" alt=""> 
@@ -197,6 +199,7 @@
                       
 
                     </div>
+                    
                     <div id="menu1" class="container tab-pane fade"><br>
                       <h3>Menu 1</h3>
                       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -208,11 +211,35 @@
                   </div>
   
               </div>
+              <hr>
               <div id="menu">
-                <p>Configurações</p>
-                <p>Audios</p>
-                <p>Simulados</p>
-                <p>Logoff</p>
+                <div class="menu-item">
+                  <a href="#">
+                    <i class="fas fa-cog fa-2x"></i>
+                    <p class="menu-label">Configurações</p>
+                  </a>
+                </div>
+                <hr>
+                <div class="menu-item">
+                  <a href="#">
+                    <i class="fas fa-volume-up fa-2x"></i>
+                    <p class="menu-label">Áudios</p>
+                  </a>
+                </div>
+                <hr>
+                <div class="menu-item">
+                  <a href="#">
+                    <i class="fas fa-pencil-alt fa-2x"></i>
+                    <p class="menu-label">Simulados</p>
+                  </a>
+                </div>
+                <hr>
+                <div class="menu-item">
+                  <a href="#">
+                    <i class="fas fa-sign-out-alt fa-2x"></i>
+                    <p class="menu-label">Log-off</p>
+                  </a>
+                </div>
               </div>
 
             </aside>
